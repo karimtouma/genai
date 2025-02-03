@@ -4,24 +4,24 @@
 
 # 🛰 Radar de Tecnología Hands-On: Generative AI
 
-## 🌟 Dream Stack Recomendado
+## 🌟 Dream Stack Recomendado (Lunes 3 de febrero 2025)
 
 ### Infraestructura Base
-- **Vector Hybrid RAG (español)**: PostgreSQL con pgvector, pg_trgm/unaccent + SQLAlchemy + Alembic
-- **Framework Agentes Productivos**: DSPy
-- **Framework Agentes PoC**: LangChain
-- **Embeddings Español Técnico**: JINA AI V3
+- **Vector Hybrid RAG (español)**: PostgreSQL con [pgvector](https://github.com/pgvector/pgvector), [pg_trgm](https://www.postgresql.org/docs/current/pgtrgm.html)/[unaccent](https://www.postgresql.org/docs/current/unaccent.html) + [SQLAlchemy](https://www.sqlalchemy.org/) + [Alembic](https://alembic.sqlalchemy.org/)
+- **Framework Agentes Productivos**: [DSPy](https://dspy.ai/)
+- **Framework Agentes PoC**: [LangChain](https://www.langchain.com/)
+- **Embeddings Español Técnico**: [JINA AI V3](https://jina.ai/news/jina-embeddings-v3-a-frontier-multilingual-embedding-model/)
 
 ### LLMs por Caso de Uso
-- **Router Principal**: Gemini 2.0 Flash* 
-- **Procesamiento de Datos**: Gemini 2.0 Thinking*
-- **Razonamiento Complejo**: O1-pro
-- **Búsqueda RAG**: DeepSeek R1
+- **Router Principal**: [Gemini 2.0 Flash](https://ai.google.dev/gemini-api/docs/models/gemini-v2)* 
+- **Procesamiento de Datos**: [Gemini 2.0 Thinking](https://ai.google.dev/gemini-api/docs/thinking)*
+- **Razonamiento Complejo**: [O1-pro](https://openai.com/index/introducing-chatgpt-pro/)
+- **Búsqueda RAG**: [DeepSeek R1](https://github.com/deepseek-ai/DeepSeek-R1)
 - **Coding**:
-  - Tareas Complejas: O1-pro
-  - Tareas Simples: DeepSeek R1
-  - Alto Contexto: Gemini EXP 12-06
-- **IDE Recomendado**: Cursor
+  - Tareas Complejas (+PRD/Reame/Docs/Webs): [O1-pro](https://openai.com/index/introducing-chatgpt-pro/)
+  - Tareas Simples (+Docs/Webs): [DeepSeek R1](https://github.com/deepseek-ai/DeepSeek-R1)
+  - Mucho Contexto (+800 lineas de código): [Gemini EXP 12-06](https://ai.google.dev/gemini-api/docs/models/gemini-v2)
+- **IDE Recomendado**: [Cursor](https://www.cursor.com/)
 
 > *Nota: Los modelos Gemini requieren implementación multipool + validación por estar en fase experimental.
 
