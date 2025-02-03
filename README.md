@@ -14,9 +14,9 @@
 
 ### LLMs por Caso de Uso
 - **Router Principal**: [Gemini 2.0 Flash](https://ai.google.dev/gemini-api/docs/models/gemini-v2)* 
-- **Procesamiento de Datos**: [Gemini 2.0 Thinking](https://ai.google.dev/gemini-api/docs/thinking)*
+- **Procesamiento de Datos (Info Retrieval PDF, Video, Image to Markdown)**: [Gemini 2.0 Thinking](https://ai.google.dev/gemini-api/docs/thinking)*
 - **Razonamiento Complejo**: [O1-pro](https://openai.com/index/introducing-chatgpt-pro/)
-- **Búsqueda RAG**: [DeepSeek R1](https://github.com/deepseek-ai/DeepSeek-R1)
+- **Retriever RAG**: [DeepSeek R1](https://github.com/deepseek-ai/DeepSeek-R1)
 - **Coding**:
   - Tareas Complejas (+PRD/Reame/Docs/Webs): [O1-pro](https://openai.com/index/introducing-chatgpt-pro/)
   - Tareas Simples (+Docs/Webs): [DeepSeek R1](https://github.com/deepseek-ai/DeepSeek-R1)
