@@ -2,63 +2,102 @@
   <img src="https://img.shields.io/badge/Radar_Tecnológico-GenAI-blueviolet?style=for-the-badge&logo=google-chrome&logoColor=white" alt="Banner">
 </p>
 
-# 🛰 Radar de Tecnología Hands On - Generative AI
+# 🛰 Radar de Tecnología Hands-On: Generative AI
+
+## 🌟 Dream Stack Recomendado
+
+### Infraestructura Base
+- **Vector Hybrid RAG (español)**: PostgreSQL con pgvector, pg_trgm/unaccent + SQLAlchemy + Alembic
+- **Framework Agentes Productivos**: DSPy
+- **Framework Agentes PoC**: LangChain
+- **Embeddings Español Técnico**: JINA AI V3
+
+### LLMs por Caso de Uso
+- **Router Principal**: Gemini 2.0 Flash* 
+- **Procesamiento de Datos**: Gemini 2.0 Thinking*
+- **Razonamiento Complejo**: O1-pro
+- **Búsqueda RAG**: DeepSeek R1
+- **Coding**:
+  - Tareas Complejas: O1-pro
+  - Tareas Simples: DeepSeek R1
+  - Alto Contexto: Gemini EXP 12-06
+- **IDE Recomendado**: Cursor
+
+> *Nota: Los modelos Gemini requieren implementación multipool + validación por estar en fase experimental.
 
 ## 🤖 Principales Modelos de IA
 
 ### OpenAI
-- **Modelo o1-pro** - Modelo empresarial para tareas complejas.
+- **Modelo O1-Pro** - Modelo empresarial para tareas complejas. Destaca en razonamiento pero requiere optimización especializada de prompts, alejándose del patrón tradicional. Aún no soporta navegación ni ejecución de código.
   [Documentación](https://openai.com/index/introducing-chatgpt-pro/)
-- **Modelo o3-mini-high** - Versión optimizada para desarrollo rápido  
+- **Modelo O3-Mini-High** - Versión optimizada para desarrollo rápido, con excelente desempeño en Python. Presenta limitaciones con lenguajes imperativos y de 4ta generación como SQL y scripting.
   [Documentación](https://openai.com/index/openai-o3-mini/)
 
 ### Claude
-- **Sonnet 3.5** - Modelo balanceado para tareas generales y análisis avanzado  
+- **Sonnet 3.5** - El modelo más balanceado para desarrollo de código. Sobresale por su baja tasa de alucinaciones y alta precisión.
   [Anuncio oficial](https://www.anthropic.com/news/claude-3-5-sonnet)
 
 ### Gemini (Google)
-- **Gemini 2.0** - Modelo multimodal de Google  
+- **Gemini 2.0** - Nueva generación de modelos de Google con capacidades mejoradas.
   [Guía técnica](https://deepmind.google/technologies/gemini/flash/)
-- **Gemini 2.0 Flash** - Optimizado para velocidad y respuestas rápidas (Experimental)
+- **Gemini 2.0 Flash** - Optimizado para velocidad de respuesta. En fase experimental, presenta desafíos en programación y tareas complejas. Requiere validación exhaustiva (15-20% de revisiones). Destaca en procesamiento multimodal (texto, pdfs, imagen, video) y necesita integrarse con arquitecturas de validación de contenido (Prometheus) para flujos agénticos, tiene muchas fallas en el response schema.
   [Documentación API](https://ai.google.dev/gemini-api/docs/models/gemini-v2)
-- **Gemini 2.0 Thinking** - Enfoque en razonamiento complejo (Experimental)  
+- **Gemini 2.0 Thinking** - Especializado en razonamiento complejo. Reduce significativamente la necesidad de ingeniería de prompts y sobresale en el procesamiento de PDFs complejos.
   [Guía de implementación](https://ai.google.dev/gemini-api/docs/thinking)
 
 ### DeepSeek
-- **DeepSeek-R1** - Modelo open-source para desarrollo experimental  
+- **DeepSeek-R1** - Modelo open-source que supera a los modelos de Google en calidad de respuesta. Si bien es más lento en procesamiento, su disponibilidad a través de múltiples proveedores en OpenRouter lo hace muy accesible.
   [GitHub oficial](https://github.com/deepseek-ai/DeepSeek-R1)  
   [Acceso via OpenRouter](https://openrouter.ai/deepseek/deepseek-r1:free)
 
 ## 🔧 Tecnologías Auxiliares
 
+### Frameworks de Agentes (bajo nivel)
+- **DSPy** - El más estable para producción. Minimalista en abstracción aunque con dependencias significativas como Tenacity.
+  [Documentación](https://dspy.ai/)
+- **LangChain** - Ideal para prototipado rápido. Sus múltiples capas de abstracción y necesidad de formateo para flujos agénticos lo hacen menos recomendable para producción.
+  [Sitio oficial](https://www.langchain.com/)
+- **LlamaIndex** - Solución enterprise en desarrollo, aún requiere maduración.
+  [Plataforma](https://www.llamaindex.ai/)
+
 ### Embeddings
-- **JINA AI V3** - Modelo de embeddings multilingüe de última generación  
-  [Detalles técnicos](https://jina.ai/news/jina-embeddings-v3-a-frontier-multilingual-embedding-model/)
-- **Google Embeddings API** - Solución cloud para embeddings escalables  
-  [Documentación oficial](https://ai.google.dev/api/embeddings)
-- **OpenAI Embeddings** - Integración directa con modelos OpenAI  
-  [Guía de uso](https://platform.openai.com/docs/guides/embeddings)
+- **JINA AI V3**
+  - Embeddings multilingües de última generación
+  - [Detalles técnicos](https://jina.ai/news/jina-embeddings-v3-a-frontier-multilingual-embedding-model/)
 
-### 🖥 IDEs Especializados
-- **Cursor** - IDE con integración nativa de IA  
-  [Sitio oficial](https://www.cursor.com/)
-- **Windsurf** - Herramientas de desarrollo asistido por IA  
-  [Plataforma](https://codeium.com/windsurf)
+- **Google Embeddings API**
+  - Solución cloud escalable
+  - [Documentación oficial](https://ai.google.dev/api/embeddings)
 
-### 🧠 RAG (Retrieval-Augmented Generation)
-- **Google Vertex AT** - Implementación empresarial de RAG  
-  [Guía cloud](https://cloud.google.com/vertex-ai/docs/rag-overview)
-- **ChromaDB** - Base de datos vectorial open-source  
-  [Documentación](https://www.chromadb.dev/)
-- **PostgreSQL pgvector** - Extensión para embeddings en PostgreSQL  
-  [Repositorio oficial](https://github.com/pgvector/pgvector)
+- **OpenAI Embeddings**
+  - Integración nativa con modelos OpenAI
+  - [Guía de uso](https://platform.openai.com/docs/guides/embeddings)
+
+### 🖥 Herramientas de Desarrollo
+- **Cursor**: IDE con IA integrada ([Sitio oficial](https://www.cursor.com/))
+- **Windsurf**: Desarrollo asistido por IA ([Plataforma](https://codeium.com/windsurf))
+
+### 🧠 Sistemas RAG
+- **Google Vertex AT**: RAG empresarial ([Guía cloud](https://cloud.google.com/vertex-ai/docs/rag-overview))
+- **ChromaDB**: Base vectorial open-source ([Documentación](https://www.chromadb.dev/))
+- **PostgreSQL pgvector**: Extensión vectorial ([Repositorio](https://github.com/pgvector/pgvector))
+
+---
+
+## 👨‍💻 Autor
+
+**Karim Touma**  
+STEM Polymata
+
+📧 [karim@touma.io](mailto:karim@touma.io)  
+🌐 [karim.touma.io](https://karim.touma.io)  
+💼 [LinkedIn](https://www.linkedin.com/in/katouma/)  
+🐦 [Twitter](https://x.com/karim_op)
 
 ---
 
 <p align="center">
-✨ Radar activo - Actualizado julio 2024 ✨<br> 
-Proyecto educativo para seguimiento de tecnologías de IA Generativa
+✨ Radar activo - Actualizado febrero 2025 ✨<br>
+Proyecto educativo para seguimiento y democratización de tecnologías de IA Generativa
 </p>
-
-
 
